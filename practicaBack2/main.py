@@ -4,9 +4,11 @@ from routes import event_route, log_route
 
 app = FastAPI()
 
+origins = ["*"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Cambia esto según el puerto de tu frontend
+    allow_origins=origins,  # Cambia esto según el puerto de tu frontend
     allow_credentials=True,
     allow_methods=["*"],  # Permite todos los métodos HTTP
     allow_headers=["*"],  # Permite todos los encabezados
