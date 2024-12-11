@@ -1,12 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
 from routes import event_route, log_route
 
 app = FastAPI()
-
-# Middleware para redirigir HTTP a HTTPS
-app.add_middleware(HTTPSRedirectMiddleware)
 
 # Configuración del middleware CORS
 origins = ["*"]
