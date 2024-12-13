@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routes import event_route, log_route
+from routes import map_route
 
 app = FastAPI()
 
@@ -16,5 +16,4 @@ app.add_middleware(
 )
 
 # Incluir las rutas
-app.include_router(event_route.router, prefix='/eventos')
-app.include_router(log_route.router, prefix='/logs')
+app.include_router(map_route.router, prefix='/mapas')

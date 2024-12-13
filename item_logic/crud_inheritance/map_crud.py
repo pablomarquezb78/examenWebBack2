@@ -10,6 +10,6 @@ MONGO_DETAILS = os.getenv("MONGO_URI")
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 database = client.PracticaExamen2
 
-class EVENTCRUD(MONGOCRUD):
+class MAPCRUD(MONGOCRUD):
     def __init__(self):
-        super().__init__('Eventos')  
+        super().__init__('Mapas')  
